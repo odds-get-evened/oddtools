@@ -1,5 +1,6 @@
 package org.odds;
 
+import java.math.BigInteger;
 import java.security.NoSuchAlgorithmException;
 import java.security.SecureRandom;
 import java.util.zip.CRC32;
@@ -38,5 +39,11 @@ public class Toolset {
         }
 
         return rows;
+    }
+
+    public static BigInteger fakeLongProcess(int n) {
+        BigInteger b = new BigInteger(n, new SecureRandom());
+
+        return b.nextProbablePrime();
     }
 }
