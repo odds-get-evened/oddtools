@@ -44,6 +44,7 @@ public class Toolset {
     public static BigInteger fakeLongProcess(int n) {
         BigInteger b = new BigInteger(n, new SecureRandom());
 
+        // remove this comment
         return b.nextProbablePrime();
     }
 }
